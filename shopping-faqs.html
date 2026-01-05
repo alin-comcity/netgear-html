@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>NETGEAR: Advanced WiFi &amp; Networking</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 text-gray-800">
+    
+     <nav x-data="{ isOpen: false }" class="relative overflow-hidden">
+        <!-- Main Navbar Content -->
+        <div class="relative px-4 sm:px-8 py-4 bg-white border-b-2">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3 group">
+                    <div class="relative">
+                        <div class="absolute inset-0"></div>
+                        <a href="/">
+                          <svg width="165" height="24" viewBox="0 0 165 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M162.486 7.68346C162.486 2.89146 158.947 0.768005 154.288 0.768005H144.737V23.2423H150.87V14.5989H151.308L156.901 23.2423H164.363L157.325 14.0343C158.8 13.8271 160.146 13.0612 161.1 11.8866C162.055 10.712 162.549 9.21326 162.486 7.68346ZM152.448 10.8411H150.871V5.24108H152.628C154.642 5.24108 156.349 5.59428 156.349 8.04228C156.349 10.4903 154.462 10.8389 152.449 10.8389" fill="black"/>
+                              <path d="M125.563 0.770325L117.315 23.2447H123.658L125.004 19.1075H133.199L134.548 23.2447H140.885L132.642 0.770325H125.563ZM126.46 14.6378L129.014 6.79209H129.186L131.74 14.6378H126.46Z" fill="black"/>
+                              <path d="M98.8898 23.2448H113.849V18.3007H105.029V14.415H113.476V9.47104H105.029V5.71908H113.848V0.768188H98.8887L98.8898 23.2448Z" fill="black"/>
+                              <path d="M81.6135 15.2881H86.4457C86.1947 17.8858 84.3353 19.2001 81.6699 19.2001C77.6318 19.2001 75.6176 15.6435 75.6176 12.1567C75.6176 8.7281 77.3534 5.05497 81.4004 5.05497C82.5071 5.02904 83.5938 5.35995 84.5087 6.0014C85.4236 6.64284 86.1206 7.5627 86.5021 8.63212L92.3272 6.30748C90.2915 2.09948 86.5334 0 81.6835 0C74.0738 0 69.2448 4.81604 69.2448 12.1235C69.2448 19.1989 74.2257 24 81.6455 24C85.5981 24 88.892 22.6674 91.2031 19.584C93.3043 16.7806 93.5486 13.9841 93.613 10.6938H81.6189L81.6135 15.2881Z" fill="black"/>
+                              <path d="M48.6724 5.72012H54.6093V23.2436H60.8443V5.72012H66.7871V0.769226H48.6724V5.72012Z" fill="black"/>
+                              <path d="M29.6158 23.2448H44.5755V18.3007H35.7576V14.415H44.2057V9.47104H35.7554V5.71908H44.5733V0.768188H29.6136L29.6158 23.2448Z" fill="black"/>
+                              <path d="M16.3599 14.512H16.2932L6.13476 0.770264H0V23.2457H6.13476V9.47436H6.20363L16.3599 23.2457H22.4936V0.770264H16.3599V14.512Z" fill="black"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-10">
+                    <a href="/" class="relative group">
+                      <span class="text-gray-900 hover:text-gray-500 text-sm">Home</span>
+                      <div class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-800 group-hover:w-full transition-all duration-300"></div>
+                      <div class="absolute -bottom-1 left-0 w-0 h-0.5 bg-white/20 group-hover:w-full transition-all duration-500 delay-100"></div>
+                    </a>
+                   <a href="/" class="relative group">
+                      <span class="text-gray-900 hover:text-gray-500 text-sm">Home Solutions</span>
+                      <div class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-800 group-hover:w-full transition-all duration-300"></div>
+                      <div class="absolute -bottom-1 left-0 w-0 h-0.5 bg-white/20 group-hover:w-full transition-all duration-500 delay-100"></div>
+                    </a>
+                    <a href="/" class="relative group">
+                      <span class="text-gray-900 hover:text-gray-500 text-sm">Business Solutions</span>
+                      <div class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-800 group-hover:w-full transition-all duration-300"></div>
+                      <div class="absolute -bottom-1 left-0 w-0 h-0.5 bg-white/20 group-hover:w-full transition-all duration-500 delay-100"></div>
+                    </a>
+                    <a href="/" class="relative group">
+                      <span class="text-gray-900 hover:text-gray-500 text-sm">Installation Service</span>
+                      <div class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-800 group-hover:w-full transition-all duration-300"></div>
+                      <div class="absolute -bottom-1 left-0 w-0 h-0.5 bg-white/20 group-hover:w-full transition-all duration-500 delay-100"></div>
+                    </a>
+                    <a href="/" class="relative group">
+                      <span class="text-gray-900 hover:text-gray-500 text-sm">Netgear Router Login</span>
+                      <div class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-800 group-hover:w-full transition-all duration-300"></div>
+                      <div class="absolute -bottom-1 left-0 w-0 h-0.5 bg-white/20 group-hover:w-full transition-all duration-500 delay-100"></div>
+                    </a>
+                    <a href="/" class="relative group">
+                      <span class="text-gray-900 hover:text-gray-500 text-sm">Support</span>
+                      <div class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-800 group-hover:w-full transition-all duration-300"></div>
+                      <div class="absolute -bottom-1 left-0 w-0 h-0.5 bg-white/20 group-hover:w-full transition-all duration-500 delay-100"></div>
+                    </a>
+                    <a href="/contact.html" class="relative group">
+                      <span class="text-gray-900 hover:text-gray-500 text-sm">Contact</span>
+                      <div class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-800 group-hover:w-full transition-all duration-300"></div>
+                      <div class="absolute -bottom-1 left-0 w-0 h-0.5 bg-white/20 group-hover:w-full transition-all duration-500 delay-100"></div>
+                    </a>
+                </div>
+
+                <!-- Right Side Buttons -->
+                <div class="flex items-center space-x-4">
+                    <!-- CTA Button (Hidden on smallest screens) -->
+                    <button class="hidden sm:flex relative group">
+                        <div class="absolute -inset-0.5"></div>
+                        <div class="relative flex items-center">
+                            <form class="flex items-center ml-4">
+                              <input
+                                type="text"
+                                placeholder="Search"
+                                class="w-45 px-2 py-1 rounded-l-md border border-gray-300 text-sm"
+                              />
+                              <button
+                                type="submit"
+                                class="hidden md:block bg-gray-100 text-white px-2 py-1 rounded-r-md hover:bg-gray-200 transition text-sm"
+                              >
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-gray-800">
+                                  <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                                </svg>
+
+                              </button>
+                            </form>
+                        </div>
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button @click="isOpen = !isOpen" class="md:hidden relative group" aria-label="Toggle mobile menu">
+                        <div class="absolute -inset-0.5 rounded"></div>
+                        <div class="relative p-2 bg-gray-900 rounded leading-none">
+                            <svg x-show="!isOpen" class="w-6 h-6 text-gray-100 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                            </svg>
+                            <svg x-show="isOpen" class="w-6 h-6 text-gray-100 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                            </svg>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Dropdown -->
+            <div x-show="isOpen" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="relative mt-4 md:hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 bg-gray-900 rounded-lg border">
+                    <a href="/" class="block px-3 py-2 rounded-md text-base font-medium text-gray-100"> Home </a>
+                    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-100"> Home Solutions </a>
+                    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-100"> Business Solutions </a>
+                    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-100"> Installation Service </a>
+                    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-100"> Netgear Router Login </a>
+                    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-100"> Support </a>
+                    <a href="/contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-100"> Contact </a>
+                    <div class="px-3 py-2">
+                        <form class="flex items-center">
+                          <input type="text" placeholder="Search" class="w-45 px-2 py-1 rounded-l-md border border-gray-300 text-sm" />
+                          <button type="submit" class="bg-gray-100 text-white px-2 py-1 rounded-r-md hover:bg-gray-200 transition text-sm" >
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-gray-800">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                            </svg>
+                          </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Customer Service Chatbot -->
+    <section class="text-gray-600 body-font overflow-hidden">
+      <div class="container px-5 py-18 mx-auto">
+        <div class="flex justify-center mt-8 mb-8">
+          <img src="https://placehold.co/800x200" alt="" />
+        </div>
+        <div class="flex flex-wrap -m-12">          
+          <div class="p-12 flex flex-col items-start">
+            <span class="inline-block py-1 px-0 mt-8 rounded bg-indigo-50 text-indigo-500 text-4xl font-medium">FAQ</span>
+          </div>
+
+          <div class="px-12 flex flex-col items-start">
+            <h2 class="mb-4 sm:text-3xl text-2xl title-font font-medium text-gray-700">How do I place an Order? </h2>
+            <p class="leading-relaxed mt-2 mb-8">
+              You can only place an order online, not through Support or Customer Care. If you do not see an “Add to Cart” or “Pre-Order” button, this means the item is unavailable at the moment. <br /> <br />
+              To learn more on Affirm payment options click HERE. You may not use Affirm to pay for a pre-order. <br /> <br />
+              To purchase a service or membership, you must sign up for a NETGEAR account. If a membership or service is not included in the transaction, you can use guest checkout. <br /> <br />
+              You will receive a tracking number after your order is processed and ready to ship. You may get more than one tracking number if your order contains more than one item. Items may be shipped and delivered at different times.
+            </p>
+            <div class="flex items-center flex-wrap pb-4 mb-4 border-b-2 border-gray-100 mt-auto w-full">
+            </div>
+          </div>
+
+           <div class="px-12 flex flex-col items-start mb-8">
+            <h2 class="mb-4 sm:text-3xl text-2xl title-font font-medium text-gray-700">How do I track my NETGEAR Store order?</h2>
+            <p class="leading-relaxed mb-8">
+              <div class="text-[12pt] font-bold mb-4">If you do not have a NETGEAR Account </div>
+              <ul class="text-sm list-disc list-inside space-y-2 leading-relaxed">
+                <li><a class="text-blue-500" href="https://netgearstore.com.bd/my-account/orders/">Click here to go to the NETGEAR Order Status page.</a></li>
+                <li>The page will ask for your Order Number, Order Email, and Billing Zip Code. Locate your Order Number from the email confirmation that was sent to the email address you used to place the order. Check your spam folder if you are unable to locate the email.</li>
+                <li>Click Check Status when all fields have been completed to see your order status.</li>
+                <li>If you did not get an order confirmation and the above information returns no order info, this means your order has not been processed correctly. Please contact customer care.</li>
+              </ul>
+            </p>
+            <p class="leading-relaxed mb-8">
+              <div class="text-[12pt] font-bold mb-4">If you have a NETGEAR Account</div>
+              <ul class="text-sm list-disc list-inside space-y-2 leading-relaxed">
+                <li><a class="text-blue-500" href="https://netgearstore.com.bd/my-account/">Click here to go to the NETGEAR Order Status page.</a></li>
+                <li>Enter your account information and click NETGEAR Sign In.</li>
+                <li>Hover over the person icon next to the shopping cart icon and select Track Order.</li>
+                <li>Click View next to the order number to see the detailed order status.</li>
+              </ul>
+            </p>
+            <p class="leading-relaxed mb-8">
+              <div class="text-[12pt] font-bold mb-4">If you have a NETGEAR Account</div>
+              <ul class="text-sm list-disc list-inside space-y-2 leading-relaxed">
+                <li><a class="text-blue-500" href="https://netgearstore.com.bd/my-account/">Click here to go to the NETGEAR Order Status page.</a></li>
+                <li>Enter your account information and click NETGEAR Sign In.</li>
+                <li>Hover over the person icon next to the shopping cart icon and select Track Order.</li>
+                <li>Click View next to the order number to see the detailed order status.</li>
+              </ul>
+              <p class="mt-5">
+                If your order contains more than one item, you may get more than one tracking number. Items may be shipped and delivered at different times. We strive to ship the complete order for your convenience but, to ensure you get your order on time, the items may be separated. <br /> <br />
+                Customers are responsible for tracking the package and being available to receive the shipment. The shipment is under customer ownership after it leaves the NETGEAR warehouse. Refunds or replacements will NOT be issued for lost or missing packages.</p>
+            </p>
+            <p class="leading-relaxed mb-8">
+              <div class="text-[12pt] font-bold mb-4">How much is shipping?</div>
+              <p class="leading-relaxed">
+                NETGEAR.com can have several shipping options. This includes free shipping for all items with no minimum order value required. Shipping days are Monday through Friday and include processing times. Estimated delivery dates are noted during check out. 
+              </p>
+            </p>
+            <p class="leading-relaxed mb-8">
+              <div class="text-[12pt] font-bold mb-4">What is your return policy?</div>
+              <p class="leading-relaxed">
+                To begin a return or to review our full return policy, please visit our Online Return Center <a class="text-blue-500" href="https://netgearstore.com.bd/refund_returns/">HERE</a>.
+              </p>
+            </p>
+            <p class="leading-relaxed mb-8">
+              <div class="text-[12pt] font-bold mb-4">How do I make changes or cancel my order?</div>
+              <p class="leading-relaxed">
+                Orders are not cancellable once placed. Pre-order items can be cancelled up to 2 days before the availability date. You may not change or edit an order. Please contact NETGEAR Customer Care team at 01958077533 to start a return process. 
+              </p>
+            </p>
+            <p class="leading-relaxed mb-8">
+              <div class="text-[12pt] font-bold mb-4">Is the NETGEAR Store secure?</div>
+              <p class="leading-relaxed">
+                Absolutely! The NETGEAR Store is protected by Norton website security. A Norton Secured Seal is visible on the NETGEAR Store website. This seal signifies that while on our website, your data is secure and encrypted. 
+              </p>
+            </p>
+            <p class="leading-relaxed mb-8">
+              <div class="text-[12pt] mb-4">I have questions. How do I talk to a NETGEAR Store representative?</div>
+              <div class="text-[12pt] mb-4">We’re here to help! Just reach out to the NETGEAR Store Customer Care team at 01958077533.</div>
+              <div class="text-[12pt] mb-4">Who do I contact if I have technical questions about the item I ordered?</div>
+              <div class="text-[12pt] mb-4">Call our Technical Support Team at 01958077533.</div>
+            </p>
+            <div class="flex items-center flex-wrap pb-4 mb-4 border-b-2 border-gray-100 mt-auto w-full">
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="bg-gray-200 mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <img src="/assets/images/SSLCommerz-Pay-With-logo-All-Size-03-scaled.webp" alt="">
+    </div>
+
+    <!-- footer-->
+    <footer class="bg-gray-900 text-gray-300">
+      <div
+        class="max-w-7xl mx-auto py-12 grid grid-cols-1 md:grid-cols-4 gap-8 px-6"
+      >
+        <div>
+          <h2 class="text-xl font-bold text-white mb-4">MyNETGEAR</h2>
+          <ul class="space-y-2">
+            <li id="i5tlj">
+              <a href="#" class="hover:text-white transition">My Account</a>
+            </li>
+            <li id="i5tlj">
+              <a href="/orders.html" class="hover:text-white transition">Orders</a>
+            </li>
+            <li id="i5tlj">
+              <a href="/warranty-info.html" class="hover:text-white transition">Warranty Info</a>
+            </li>
+            <li id="i5tlj">
+              <a href="/shopping-faqs.html" class="hover:text-white transition">Shopping FAQs</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-bold text-white mb-4">Customer Care</h3>
+          <ul class="space-y-2">
+            <li id="i5tlj">
+              <a href="/contact.html" class="hover:text-white transition"
+                >Contact Us</a
+              >
+            </li>
+             <li id="i5tlj">
+              <a href="/emi-information.html" class="hover:text-white transition"
+                >EMI Information</a
+              >
+            </li>
+             <li id="i5tlj">
+              <a href="/refund_returns.html" class="hover:text-white transition">Refund and Returns Policy</a>
+            </li>
+             <li id="i5tlj">
+              <a href="#" class="hover:text-white transition"
+                >Site Map</a
+              >
+            </li>
+             <li id="i5tlj">
+              <a href="/cookie-policy-eu.html" class="hover:text-white transition"
+                >Cookie Policy (EU)</a
+              >
+            </li>
+          </ul>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-bold text-white mb-4">COMPANY</h3>
+          <ul class="space-y-2">
+            <li id="i5tlj">
+              <a href="/about.html" class="hover:text-white transition"
+                >About Netgear Store</a
+              >
+            </li>
+            <li id="i5tlj">
+              <a href="/delivery-information.html" class="hover:text-white transition"
+                >Delivery Information</a
+              >
+            </li>
+            <li id="i5tlj">
+              <a href="/privacy-policy.html" class="hover:text-white transition">Privacy Policy</a>
+            </li>
+            <li id="i5tlj">
+              <a href="/terms-conditions.html" class="hover:text-white transition"
+                >Terms &amp; Conditions</a
+              >
+            </li>
+            <li id="i5tlj">
+              <a href="/cookies-policy.html" class="hover:text-white transition">Cookies Policy</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="py-4 text-left text-sm text-gray-200" >
+            <p class="pb-6">
+              <a href="mailto:info@netgearstore.com.bd">info@netgearstore.com.bd</a>
+            </p>
+            <p class="text-gray-100 leading-7">
+              Netgear Store Bangladesh, 75-76, Mirpur Road, Room-106, BS Bhavan, Fifth Floor. Dhaka
+            </p>
+            <div class="flex gap-2 pt-4">
+              <svg class="bg-gray-100 w-8 h-8 rounded-full border" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-337 273 123.5 256" xml:space="preserve">
+                <path d="M-260.9,327.8c0-10.3,9.2-14,19.5-14c10.3,0,21.3,3.2,21.3,3.2l6.6-39.2c0,0-14-4.8-47.4-4.8c-20.5,0-32.4,7.8-41.1,19.3
+                  c-8.2,10.9-8.5,28.4-8.5,39.7v25.7H-337V396h26.5v133h49.6V396h39.3l2.9-38.3h-42.2V327.8z"/>
+              </svg>
+
+              <svg class="bg-gray-100 w-8 h-8 rounded-full border" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                viewBox="-143 145 512 512" xml:space="preserve">
+                <g>
+                  <polygon points="78.9,450.3 162.7,401.1 78.9,351.9 	"/>
+                  <path d="M113,145c-141.4,0-256,114.6-256,256s114.6,256,256,256s256-114.6,256-256S254.4,145,113,145z M241,446.8L241,446.8
+                    c0,44.1-44.1,44.1-44.1,44.1H29.1c-44.1,0-44.1-44.1-44.1-44.1v-91.5c0-44.1,44.1-44.1,44.1-44.1h167.8c44.1,0,44.1,44.1,44.1,44.1
+                    V446.8z"/>
+                </g>
+              </svg>
+
+              <svg class="bg-gray-900 w-8 h-8 rounded-full border" viewBox="0 0 1200 1227" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" fill="white"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
+      <div
+        class="border-t border-gray-600 mt-5 py-4 text-center text-sm text-gray-100"
+      >
+        Copyright © 2025 Netgear Bangladesh
+      </div>
+    </footer>te border-t border-gray-200"></footer>
+    <!-- /footer-->
+  </body>
+</html>
